@@ -1,4 +1,5 @@
 alias n="neofetch"
+alias t="tmux"
 alias on="nvim ~/.config/nvim/lua/packer-init.lua"
 alias ra="ranger"
 alias ll="exa -l --icons"
