@@ -1,3 +1,7 @@
+#设置自动开启X服务
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
 setopt HIST_IGNORE_ALL_DUPS
 bindkey -e
 WORDCHARS=${WORDCHARS//[\/]}
@@ -24,11 +28,13 @@ if [ -f ~/.sconfig/zsh/zshrc ]; then
 	source ~/.sconfig/zsh/zshrc
 fi
 # Initialize modules.
-source ${ZIM_HOME}/init.zsh
+# source ${ZIM_HOME}/init.zsh
+source ~/.zim/plugin.zsh
 source ~/.zim/alisa.zsh
 source ~/.zim/env.zsh
-source ~/.zim/plugin.zsh
-
+# if [ -f ~/.config/zsh/zshrc ]; then
+# 	source ~/.config/zsh/zshrc
+# fi
 zmodload -F zsh/terminfo +p:terminfo
 # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
 for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
@@ -36,5 +42,3 @@ for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search
 for key ('k') bindkey -M vicmd ${key} history-substring-search-up
 for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
-# }}} End configuration added by Zim install
-
