@@ -2,3 +2,4 @@ zmodule prompt-pwd
 zmodule magicmace
 zmodule zdharma-continuum/fast-syntax-highlighting
 zmodule hlissner/zsh-autopair
+zmodule agkozak/zsh-z
