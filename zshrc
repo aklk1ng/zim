@@ -2,5 +2,3 @@
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
-source ~/.config/zsh/alisa.zsh
-source ~/.config/zsh/env.zsh
