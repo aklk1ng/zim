@@ -150,7 +150,7 @@ function get_datetime()
 
 function backup_old_files()
 {
-    old_zim=$HOME"/zim"
+    old_zim=$HOME"/.zim"
     is_exist=$(is_exist_dir $old_zim)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -308,6 +308,10 @@ function install_zim_on_linux()
 
 function main ()
 {
+    begin=`get_now_timestamp`
+
+    type=$(uname)
+    echo "Platform type: "${type}
     if [ ${type} == "Darwin" ]; then
         install_zim_on_mac
     elif [ ${type} == "FreeBSD" ]; then
