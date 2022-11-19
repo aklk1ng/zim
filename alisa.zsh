@@ -1,5 +1,6 @@
 alias n="neofetch"
 alias t="tmux"
+alias fish="asciiquarium"
 alias wt="wttr Nanchang"
 alias on="nvim ~/.config/nvim/lua/packer-init.lua"
 alias ra="ranger"
