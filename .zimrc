@@ -7,3 +7,4 @@ zmodule zimfw/fzf
 zmodule agkozak/zsh-z
 zmodule zimfw/utility
 zmodule zimfw/exa
+zmodule zimfw/ssh
