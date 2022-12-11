@@ -7,5 +7,5 @@ export FZF_TMUX=1
 export FZF_TMUX_HEIGHT='80%'
 # export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
 
-export fzf_preview_cmd='cat {}'
+export fzf_preview_cmd='bat {}'
 
