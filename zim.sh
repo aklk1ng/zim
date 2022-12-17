@@ -129,7 +129,13 @@ function install_prepare_software_on_opensuse()
 }
 function begin_install_zim()
 {
-    curl --proxy 127.0.0.1:7890 -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+    ps -ef | grep clash | grep -v grep
+    if [ $? -ne 0 ]
+    then
+        curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+    else
+        curl --proxy 127.0.0.1:7890 -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+    fi
 }
 
 function is_exist_dir()
