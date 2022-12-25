@@ -169,12 +169,12 @@ function backup_old_files()
 }
 function copy_cat_files()
 {
-    cp ~/zim/alisa.zsh ~/.zim/alisa.zsh
-    cp ~/zim/env.zsh ~/.zim/env.zsh
-    cat ~/zim/zimrc >> ~/.zimrc
+    cp ./alisa.zsh ~/.zim/alisa.zsh
+    cp ./env.zsh ~/.zim/env.zsh
+    cat ./.zimrc >> ~/.zimrc
     tp=$(uname -s)
     if [[ $tp == "Linux" ]]; then
-        cat ~/zim/zshrc >> ~/.zshrc
+        cat ./.zshrc >> ~/.zshrc
     fi
 }
 
