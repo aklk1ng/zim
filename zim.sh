@@ -171,6 +171,8 @@ function copy_cat_files()
 {
     cp ./alisa.zsh ~/.zim/alisa.zsh
     cp ./env.zsh ~/.zim/env.zsh
+    cp ./git.zsh ~/.zim/git.zsh
+    cp ./fzf.zsh ~/.zim/fzf.zsh
     cat ./.zimrc >> ~/.zimrc
     tp=$(uname -s)
     if [[ $tp == "Linux" ]]; then
