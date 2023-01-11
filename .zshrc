@@ -29,6 +29,8 @@ source ${ZIM_HOME}/init.zsh
 source ~/.zim/alisa.zsh
 source ~/.zim/env.zsh
 source ~/.zim/git.zsh
+source ~/.zim/fzf.zsh
+source ~/.zim/extract.zsh
 export HOMEBREW_NO_AUTO_UPDATE=1
 # source ~/.zim/vi.zsh
 zmodload -F zsh/terminfo +p:terminfo
